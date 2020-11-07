@@ -1,0 +1,181 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #333333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+body, h1, h2, h3, h4, h5, p, ul, figure {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+}
+a:hover {
+  opacity: 1;
+}
+.wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* header */
+.header-fixed {
+  position: fixed;
+  height: 73px;
+  width: 100%;
+  background-color: #fff;
+}
+.header {
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;
+   padding: 0 9vw;
+   height: 100%;
+}
+.header-left {
+  display: flex;
+  margin-right: 13px;
+}
+.header-left img {
+  width: 120px;
+  height: 35px;
+}
+.header-left p {
+  margin-left: 13px;
+}
+.header-right .btn-pc {
+  width: 315px;
+  background-color: rgb(218,107,100);
+  color: #fff;
+  padding: 15px 37px;
+  border-radius: 20px;
+}
+.header-right .btn-mb {
+  display: none;
+}
+
+@media(max-width: 810px) {
+  .header {
+    padding: 0;
+  }
+  .header-left {
+    flex-direction: column-reverse;
+  }
+  .header-right {
+    height: 100%;
+  }
+  .header-right .btn-pc {
+    display: none;
+  }
+  .header-right .btn-mb {
+    display: block;
+    background-color: rgb(218,107,100);
+    color: #fff;
+    width: 85px;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+/* hero */
+.hero {
+  background-image: url(img/mainsp.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+.hero img {
+  height: 95px;
+  width: 295px;
+  margin-bottom: 50px;
+}
+.hero p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* request */
+.request {
+  background-color: #EBB94D;
+  color: #fff;
+  text-align: center;
+  padding: 36px 175px 50px;
+  font-size: 20px;
+}
+.request .red {
+  color: #C7314E;
+  background-color: #fff;
+  font-size: 18px;
+  padding: 0;
+}
+.request .btn {
+  font-size: 28px;
+  background-color: #DA6B64;
+  border-radius: 55px;
+  padding: 35px 0 35px;
+  margin-bottom: 70px;
+  margin-top: 45px;
+  display: block;
+  width: 74vw;
+}
+.request p {
+  line-height: 1.8;
+  margin-top: 23px;
+}
+.date p {
+  line-height: 3;
+  white-space: nowrap;
+}
+.sns {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 23px;
+}
+.sns li:not(:last-child) {
+  margin-right: 3px;
+}
+.sns li {
+  font-size: 5px;
+}
+.sns li span {
+  padding: 5px;
+  border-radius: 5px;
+}
+.twitter {
+  background-color: #3495E0;
+}
+.facebook {
+  background-color: #1877F2;
+}
+.line {
+  background-color: #57BC2F;
+}
+
