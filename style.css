@@ -251,7 +251,7 @@ h2::after {
 
 @media(max-width: 780px) {
   .question-inner {
-    padding: 50px 0 100px;
+    padding: 50px 2vw 100px;
     margin-top: 60px;
   }
   .br-mb {
@@ -287,33 +287,123 @@ h2::after {
   text-align: center;
 }
 .skill-inner {
-  padding: 120px 20vw 65px;
+  padding: 120px 0 65px;
 }
 .skill-inner h2 {
   margin-bottom: 68px;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  font-weight: bold;
 }
 .skill-inner p {
   margin-bottom: 35px;
+  font-size: 20px;
 }
 .box {
   border: 3px solid #ECBA4D;
   background-color: #fff;
-  padding: 35px 270px 45px;
-  overflow: auto;
+  padding-top: 35px; 
+  padding-bottom: 45px;
+  width: 104vw;
+  max-width: 1165px;
+  margin: 0 auto;
+}
+.box + p {
+  font-size: 20px;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+.box p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.box-mini {
+  margin-right: 30px;
+}
+.box-last {
+  margin-right: 0;
 }
 .box-pc {
   display: flex;
-}
-.box1, .box2 {
-  display: none;
+  justify-content: center;
 }
 .box-mini img {
   width: 50px;
   height: 50px;
+  margin-bottom: 9px;
+}
+.box-last img {
+  width: 130px;
 }
 
 @media(max-width: 780px) {
   .skill-inner {
     padding: 110px 0 58px;
+  }
+  .box {
+    max-width: 560px;
+    width: 73vw;
+  }
+  .box-pc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  .box-mini img {
+    width: 33px;
+    height: 33px;
+  }
+  .box-last img {
+    width: 88px;
+  }
+}
+
+/* step */
+.step {
+  background-image: url(img/aboutsecondbgsp.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+}
+.step h3 {
+  padding-top: 63px;
+  margin-bottom: 35px;
+  font-size: 28px;
+}
+.step p {
+  font-size: 20px;
+}
+.step h3 + p {
+  margin-bottom: 24px;
+}
+.step span {
+  color: #ECBA4D;
+}
+.step-box {
+  display: flex;
+}
+.step-mini {
+  background-color: #fff;
+  width: 375px;
+  margin-right: 15px;
+}
+.step1 {
+  background-color: #ECBA4D;
+  width: 310px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.step-mini p {
+  color: #333;
+}
+
+@media(max-width: 780px) {
+  .step h3 + p {
+    font-size: 10px;
+  }
+  .step p {
+    font-size: 13px;
   }
 }
