@@ -90,12 +90,13 @@ a:hover {
     width: 85px;
     height: 100%;
     text-align: center;
+    line-height: 75px;
   }
 }
 
 /* hero */
 .hero {
-  background-image: url(img/mainsp.jpg);
+  background-image: url(img/main.jpg);
   background-position: center;
   background-size: cover;
   height: 500px;
@@ -294,6 +295,7 @@ h2::after {
   margin-right: 20vw;
   margin-left: 20vw;
   font-weight: bold;
+  white-space: nowrap;
 }
 .skill-inner p {
   margin-bottom: 35px;
@@ -340,9 +342,26 @@ h2::after {
   .skill-inner {
     padding: 110px 0 58px;
   }
+  .skill-inner h2 {
+    font-size: 18px;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    line-height: 2.2;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
+  .skill-inner p {
+    font-size: 15px;
+  }
   .box {
     max-width: 560px;
-    width: 73vw;
+    width: 83vw;
+  }
+  .box + p {
+    font-size: 15px;
+  }
+  .box-mini p {
+    font-size: 10px;
   }
   .box-pc {
     display: grid;
@@ -393,11 +412,11 @@ h2::after {
   margin-right: 15px;
   border-radius: 10px;
 }
-.step1 {
+.step-mini .step1 {
   background-color: #ECBA4D;
   width: 310px;
   margin: 30px 28px 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 16px;
   color: #fff;
 }
@@ -414,26 +433,147 @@ h2::after {
 }
 .blue {
   background-color: #246EA9;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .blue-text {
   color: #fff;
+  font-size: 20px;
+  margin: auto;
 }
 .blue-text span {
   color: #ECBA4D;
 }
 @media(max-width: 780px) {
+  .step {
+    height: 100vw;
+  }
+  .step h3 {
+    font-size: 18px;
+    margin-bottom: 22px;
+    line-height: 1.2;
+  }
   .step h3 + p {
     font-size: 10px;
+    margin-bottom: 20px;
   }
   .step p {
     font-size: 13px;
+    font-weight: bold;
   }
   .step-box {
-    width: 72vw;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 40px;;
   }
   .step-mini {
     margin-right: 0;
+    width: 90vw;
   }
+  .step-mini:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .step-mini .step1 {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .step-box .step1 {
+    width: 75vw;
+  }
+  .step h3 + p {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .step1 + p {
+    margin-bottom: 10px;
+  }
+  .step-mini p:last-child {
+    margin-bottom: 15px;
+  }
+  .blue {
+    height: 95px;
+  }
+  .blue-text {
+    font-size: 12px;
+  }
+}
+/* learn */
+.learn {
+  text-align: center;
+  padding: 65px 0 55px;
+}
+.learn h3 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+.learn h3 span {
+  font-size: 16px;
+}
+.learn p {
+  font-size: 20px;
+  margin-bottom: 43px;
+}
+.learn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.learn-mini {
+  width: 178px;
+  height: 178px;
+}
+.learn-mini:not(:last-child) {
+  margin-right: 41px;
+}
+
+@media(max-width: 780px) {
+  .learn-mini {
+    width: 117px;
+    height: 117px;
+  }
+  .learn h3 {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+  .learn h3 span {
+    font-size: 12px;
+  }
+  .learn p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .learn-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* member */
+.member {
+  background-image: url(img/teacherbg.jpg);
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.member h3 {
+  font-size: 28px;
+  margin-top: 85px;
+}
+.member-box {
+  margin-bottom: 35px;
+  display: flex;
+}
+.member-mini:not(;:last-child) {
+  margin-right: 25px;
+}
+.member-mini img {
+  width: 195px;
+  height: 195px;
 }
