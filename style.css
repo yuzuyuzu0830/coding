@@ -558,22 +558,80 @@ h2::after {
 /* member */
 .member {
   background-image: url(img/teacherbg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 815px;
   font-size: 16px;
   color: #fff;
   text-align: center;
 }
+.member-mini {
+  width: 360px;
+  height: 380px;
+  border: 3px solid #fff;
+  position: relative;
+}
 .member h3 {
   font-size: 28px;
-  margin-top: 85px;
+  padding-top: 85px;
+  margin-bottom: 37px;
+}
+.member h3 + p {
+  margin-bottom: 205px;
 }
 .member-box {
   margin-bottom: 35px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.member-mini:not(;:last-child) {
+.member-mini:not(:last-child) {
   margin-right: 25px;
 }
 .member-mini img {
   width: 195px;
   height: 195px;
+  border-radius: 50%;
+  position: absolute;
+  top: -45%;
+  left: 25%;
+}
+.member-text {
+  padding: 50px 35px;
+}
+.text-box {
+  margin-top: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.member-mini p:first-child {
+  margin-bottom: 15px;
+}
+
+@media(max-width: 870px) {
+  .member {
+    font-size: 12px;
+  }
+  .member h3 {
+    font-size: 18px;
+  }
+  .member-box {
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+  .member-mini {
+    width: 85vw;
+    height: 170px;
+    margin-right: 0;
+  }
+  .member-mini img {
+    width: 120px;
+    height: 120px;
+  }
+  .text-box {
+    line-height: 1.5;
+  }
 }
