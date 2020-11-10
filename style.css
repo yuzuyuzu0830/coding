@@ -361,10 +361,10 @@ h2::after {
 /* step */
 .step {
   background-image: url(img/aboutsecondbgsp.jpg);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   text-align: center;
-  margin: 0 auto;
+  height: 585px;
   color: #fff;
 }
 .step h3 {
@@ -383,27 +383,57 @@ h2::after {
 }
 .step-box {
   display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .step-mini {
   background-color: #fff;
   width: 375px;
   margin-right: 15px;
+  border-radius: 10px;
 }
 .step1 {
   background-color: #ECBA4D;
   width: 310px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 28px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
 }
 .step-mini p {
   color: #333;
+  font-size: 14px;
+  line-height: 1.5;
 }
-
+.step1 + p {
+  margin-bottom: 20px;
+}
+.step-mini p:last-child {
+  margin-bottom: 35px;
+}
+.blue {
+  background-color: #246EA9;
+}
+.blue-text {
+  color: #fff;
+}
+.blue-text span {
+  color: #ECBA4D;
+}
 @media(max-width: 780px) {
   .step h3 + p {
     font-size: 10px;
   }
   .step p {
     font-size: 13px;
+  }
+  .step-box {
+    width: 72vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-mini {
+    margin-right: 0;
   }
 }
