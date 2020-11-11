@@ -613,9 +613,13 @@ h2::after {
 @media(max-width: 870px) {
   .member {
     font-size: 12px;
+    height: 1120px;
   }
   .member h3 {
     font-size: 18px;
+  }
+  .member h3 + p {
+    margin-bottom: 125px;
   }
   .member-box {
     flex-direction: column;
@@ -623,15 +627,79 @@ h2::after {
     font-weight: 300;
   }
   .member-mini {
-    width: 85vw;
-    height: 170px;
+    width: 98vw;
+    height: 175px;
     margin-right: 0;
+    border: 2px solid #fff;
+  }
+  .member-mini:not(:last-child) {
+    margin-bottom: 115px;
   }
   .member-mini img {
     width: 120px;
     height: 120px;
+    top: -55%;
+    left: 39%;
+  }
+  .member-text {
+    padding: 40px 10px 18px;
   }
   .text-box {
     line-height: 1.5;
+    margin-top: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* study */
+.study {
+  background-image: url(img/classbg.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+.study h3 {
+  color: #fff;
+  font-size: 28px;
+  padding-top: 60px;
+  margin-bottom: 10px;
+}
+.study h3 + p {
+  font-size: 16px;
+  color: #fff;
+}
+.map-bg {
+  display: flex;
+}
+.map {
+  border: 1px solid #246EA9;
+  margin-right: 30px;
+  background-color: #fff;
+}
+.map p {
+  font-size: 20px;
+  color: #fff;
+  background-color: #246EA9;
+}
+.map ul li {
+  font-size: 16px;
+  border: 1px solid #E5E5E5;
+}
+
+@media(max-width: 870px) {
+  .study {
+    
+  }
+  .study h3 {
+    font-size: 18px;
+  }
+  .study h3 + p {
+    font-size: 12px;
+  }
+  .map p {
+    font-size: 15px;
+  }
+  .map ul li {
+    font-size: 16px;
   }
 }
