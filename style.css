@@ -721,3 +721,32 @@ h2::after {
     font-weight: bolder;
   }
 }
+
+/* flow */
+.accordion-content .p-gr {
+  color: #C1BBAD;
+  font-weight: 400;
+}
+.accordion-content {
+  font-weight: bold;
+}
+@media(max-width: 870px) {
+  .flow h3 {
+    font-size: 18px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+  }
+  .accordion-title{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .accordion-title img {
+    width: 35px;
+    margin-right: 15px;
+  }
+  .accordion-content {
+    font-size: 12px;
+  }
+  
+}
