@@ -661,34 +661,41 @@ h2::after {
 .study h3 {
   color: #fff;
   font-size: 28px;
-  padding-top: 60px;
+  padding-top: 45px;
   margin-bottom: 10px;
 }
 .study h3 + p {
   font-size: 16px;
   color: #fff;
+  margin-bottom: 35px;
 }
 .map-bg {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .map {
-  border: 1px solid #246EA9;
+  border: 2px solid #246EA9;
   margin-right: 30px;
   background-color: #fff;
+  margin-bottom: auto;
+  width: 370px;
 }
 .map p {
   font-size: 20px;
   color: #fff;
   background-color: #246EA9;
+  padding: 15px 0;
 }
 .map ul li {
   font-size: 16px;
   border: 1px solid #E5E5E5;
+  padding: 10px 0;
 }
 
 @media(max-width: 870px) {
   .study {
-    
+    background-image: url(img/classbgsp.jpg)
   }
   .study h3 {
     font-size: 18px;
@@ -696,10 +703,21 @@ h2::after {
   .study h3 + p {
     font-size: 12px;
   }
+  .map-bg {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .map-bg .map:first-child {
+    margin-bottom: 15px;
+  }
+  .map {
+    width: 97vw;
+  }
   .map p {
     font-size: 15px;
   }
   .map ul li {
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: bolder;
   }
 }
