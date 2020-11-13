@@ -673,6 +673,7 @@ h2::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 75px;
 }
 .map {
   border: 2px solid #246EA9;
@@ -724,24 +725,74 @@ h2::after {
 }
 
 /* flow */
-.flow h3 {
+.flow-mb {
+  display: none;
+}
+.flow-pc {
   text-align: center;
 }
-.accordion-content .p-gr {
+.flow-pc h3 {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 60px;
+  margin-bottom: 65px;
+}
+.flow-pc h3 + img {
+  width: 1000px;
+  margin: 0 auto;
+}
+.flow-pc .accordion-box {
+  display: flex;
+  background-color: #FEF5E0;
+  padding: 40px 50px 30px 70px;
+  width: 1165px;
+  height: 225px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.flow-pc .accordion-box:first-child {
+  margin-top: 25px;
+}
+.flow-pc h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.flow-pc .accordion-title img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+.flow-pc .accordion-content .p-gr {
   color: #C1BBAD;
   font-weight: 400;
 }
-.accordion-content {
+.flow-pc .accordion-content {
   font-weight: bold;
+  margin-left: 45px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.flow-pc .accordion-content p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.flow-line {
+  width: 760px;
+  height: 65px;
 }
 @media(max-width: 870px) {
-  .flow h3 {
+  .flow-pc {
+    display: none;
+  }
+  .flow-mb {
+     text-align: left;
+     display: block;
+  }
+  .flow-mb h3 {
     font-size: 18px;
     padding-top: 50px;
     margin-bottom: 40px;
-  }
-  .flow h3 + img {
-    display: none;
+    text-align: center;
   }
   .accordion-container {
     position: relative;
@@ -754,7 +805,7 @@ h2::after {
     font-weight: 800;
     letter-spacing: 1px;
     padding: 20px 0;
-    background-color: #FEF5E0 ;
+    background-color: #FEF5E0;
     position: relative;
     cursor: pointer;
     border-radius: 5px;
