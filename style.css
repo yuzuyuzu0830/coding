@@ -854,7 +854,66 @@ h2::after {
   .open {
     display: block;
   }
- 
-  
+}
+
+/* contact */
+.contact {
+  background-color: #EBB94D;
+  text-align: center;
+  margin-top: 40px;
+}
+.contact-inner {
+  padding: 65px 280px 70px;
+}
+.contact h3 {
+  font-size: 28px;
+  margin: 30px 0;
+}
+.contact h3 + p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.form input, .form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+.form input[type="text"] {
+  margin-bottom: 20px;
+  padding: 20px 10px;
+}
+.form input[type="email"] {
+  margin-bottom: 45px;
+  padding: 20px 10px;
+}
+.form textarea {
+  margin-bottom: 40px;
+  padding: 10px 10px 70px;
+}
+.form input[type="submit"] {
+  background-color: #DA6B64;
+  color: #fff;
+  font-size: 23px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  padding: 15px 0;
+}
+.form ::placeholder {
+  font-size: 14px;
+  opacity: 1;
+}
+@media(max-width: 870px) {
+  .contact-inner {
+    padding: 50px 0 50px;
+  }
+  .form input, .form textarea {
+    width: 94vw;
+  }
+  .contact h3 {
+    font-size: 18px;
+  }
+  .contact h3 + p {
+    font-size: 12px;
+  }
 }
 
