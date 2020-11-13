@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iSara</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -380,6 +381,8 @@
                 <li><span class="line"><a href="#"><i class="ri-line-fill"></i></a>LINE</span></li>
             </ul>
         </footer>
+
+        <div id="page-top"><a href="#"></a></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -399,6 +402,21 @@
             $('.ac-title').on('click', function(){
                 $(this).next().slideToggle();
                 $(this).toggleClass('open');
+            });
+
+            var pagetop = $('#page-top');
+            pagetop.hide();
+
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 100) {
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function(){
+                $('body, html').animate({scrollTop: 0}, 500);
+                return false;
             });
         });
     </script>

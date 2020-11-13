@@ -1003,3 +1003,47 @@ h2::after {
   color: #fff;
   margin-top: 10px;
 }
+
+/* page-top */
+#page-top {
+  position: fixed;
+  bottom: 85px;
+  right: 50px;
+  background: #ECECEC;
+  width: 70px;
+  height: 70px;
+}
+#page-top a {
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: block;
+}
+#page-top a::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f106';
+  font-weight: 900;
+  font-size: 25px;
+  color: #333;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: -20px;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media(max-width:870px) {
+  #page-top {
+    bottom: 30px;
+    right: 10px;
+    width: 45px;
+    height: 65px;
+  }
+  #page-top a::before {
+    right: 8px;
+  }
+}
