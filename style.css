@@ -712,6 +712,7 @@ h2::after {
   }
   .map {
     width: 97vw;
+    margin: 0 auto;
   }
   .map p {
     font-size: 15px;
@@ -723,8 +724,6 @@ h2::after {
 }
 
 /* flow */
-.flow {
-}
 .flow h3 {
   text-align: center;
 }
@@ -748,6 +747,7 @@ h2::after {
     position: relative;
     width: 95vw;
     border: none;
+    margin: 0 auto;
   }
   .accordion-title{
     font-size: 15px;
@@ -757,6 +757,8 @@ h2::after {
     background-color: #FEF5E0 ;
     position: relative;
     cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
   }
   .accordion-title img {
     width: 40px;
@@ -779,18 +781,29 @@ h2::after {
     transform: rotate(-45deg);
     top: 45%;
   }
+  .accordion-title.open {
+    margin-bottom: 0;
+  }
   .accordion-content {
     padding-bottom: 15px;
     background-color: #FEF5E0;
     padding-left: 14px;
     padding-right: 20px;
     display: none;
+    border-radius: 5px;
+  }
+  .accordion-content:not(:last-child) {
+    margin-bottom: 5px;
   }
   .accordion-content p {
     margin-bottom: 15px;
     font-size: 12px;
     font-weight: bold;
   }
+  .open {
+    display: block;
+  }
  
   
 }
+

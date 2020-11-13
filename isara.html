@@ -226,7 +226,7 @@
             <img src="img/flow.jpg" alt="">
             <div id="accordion" class="accordion-container">
                 <h4 class="accordion-title js-accordion-title"><img src="img/skypeconsulting.png" alt="">Skypeで事前コンサル</h4>
-                <div class="accordion-content">
+                <div class="accordion-content open">
                     <p>現在のスキルの状況、パソコンの環境説明、渡航での注意点を話します。</p>
                     <p>簡単なテストあり</p>
                     <p class="p-gr">iSaraでは受講費以上を稼げることを保障しています。従って、事前コンサル時点で簡単なテストを実施し、場合によってはお断りをしております。（テストの内容はPCの基礎知識に関するテストですので、普段からパソコンを利用する方でしたら問題ありません。テストはもちろん無料ですので、まずはお問い合わせください。）</p>
@@ -239,10 +239,10 @@
                     また、参加者グループコミュニティも作成するので、横の繋がりでモチベーションを高めることもできます。</p>
                 </div>
                 <h4 class="accordion-title js-accordion-title"><img src="img/flight.png" alt="">現地に渡航</h4>
-                <dvi class="accordion-content">
+                <div class="accordion-content">
                     <p>到着日には空港でお出迎えし、初日のオリエンテーションを行います。滞在先は空港からすぐの出来たてシェアハウス。美味しいタイ料理などもご紹介します。</p>
                     <p>iSaraは『ノマド』フリーランス養成講座です。楽しいノマド体験ができるよう、バンコクでの生活はこちらでサポートします。</p>
-                </dvi>
+                </div>
                 <h4 class="accordion-title js-accordion-title"><img src="img/personwithlight.png" alt="">案件を通して学ぶ</h4>
                 <div class="accordion-content">
                     <p>現役フリーランスが抱える案件に加え、クラウドソーシングを使って実案件をこなします。</p>
@@ -258,14 +258,17 @@
         </section>
     </div>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         'use strict';
 
-        $(document).ready(function(){
+        $(function(){
+            $('.accordion-title:first-of-type').addClass('open');
             $('.js-accordion-title').on('click', function(){
-                $(this).next().slideToggle();
-                $(this).toggleClass('open');
+                $(this).next().slideToggle(300);
+                $(this).toggleClass("open");
+                $('.js-accordion-title').not(this).removeClass('open');
+                $('.js-accordion-title').not($(this)).next('.accordion-content').slideUp(300);
             });
         });
     </script>
